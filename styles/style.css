@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ___________Shared-style__________ */
+.display-flex{
+    display: flex;
+}
+/* _______navigation-bar_______ */
+.navigation-title{
+    font-size: 30px;
+    color: whitesmoke;
+}
+.navbar-wraper{
+    background: gray;
+}
+.navigation{
+    max-width: 1440px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px  20px;
+}
+.nav-btn-container li{
+    list-style: none;
+    margin-left: 30px;
+    border: 1px solid black;
+    background: black;
+    padding:5px 10px;
+    border-radius: 5px;
+}
+.nav-btn-container a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 18px;
+}
+.hamburgar-menu{
+    display: none;
+    font-size: 30px;
+    color: whitesmoke;
+}
+/* ___________Main-content___________ */
+.main-content{
+    max-width: 1440px;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+}
+/* ___________Banners-section___________ */
+.banners{
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(238, 243, 248);
+    border-radius: 5px;
+    padding: 7px;
+    margin-top: 30px;
+}
+.banner-image{
+    width: 48%;
+}
+.banner-text{
+    width: 48%;
+    text-align: center;
+    /* border: 2px solid red; */
+}
+.banner-title{
+    font-size: 2.3rem;
+}
+.banner-description{
+    font-size: 18px;
+    margin: 10px 0px;
+}
+.banner-image{
+    width: 48%;
+    position: relative;
+}
+.banner-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+.banner-btn{
+    /* width: 100px;
+    height: 30px; */
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 1px solid grey;
+    background: rgb(238, 243, 248);;
+}
+.fifty-off{
+    background: rgba(0, 0, 0, 0.685);
+    color: white;
+    width: max-content;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    position: absolute;
+    top: 40%;
+    left: 34%;
+}
+/* ______________Popular-container_____________ */
+.popular-container{
+    /* border: 2px solid red; */
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    
+}
+.cards{
+    /* border: 1px solid black; */
+    box-shadow: 8px 8px 10px grey;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    background: white;
+}
+.cards>div img:nth-child(1){
+    height: 250px;
+}
+.card-image img{
+    width: 100%;
+    /* height: 100%; */
+}
+/* ___________________from-section___________________ */
+ .qna-main{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background: rgb(212, 209, 209);
+    border-radius: 7px;
+ }
+ .qna-child{
+    /* border: 3px solid green; */
+    width: 48%;
+    padding: 7px;
+ }
+ .qna-child img{
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+ }
+ /*--------form-container---------*/
+ .form-container{
+    /* border: 2px solid orangered; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+ .form-field{
+    width: 48%;
+    /* border: 1px solid aqua; */
+    /* margin-top: 40px; */
+ }
+ .form-field-text-area{
+    width: 100%;
+ }
+ .form-container input,select,textarea{
+    width: 100%;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 7px;
+ }
+ .qna-btn{
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    background: palevioletred;
+    display: block;
+    margin-left: auto;
+    margin-top: 10px;
+ }
+
+
+/* __________Responsive-layout___________ */
+@media screen and (max-width:800px){
+    .navigation{
+        flex-direction:column;
+    }.fifty-off{
+        left: 25%;
+    }
+    .popular-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .qna-main{
+        flex-direction: column;
+    }
+    .qna-child{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:500px){
+    .navigation{
+        flex-direction: row;
+    }
+   
+    .nav-btn-container{
+        display: none;
+    }
+
+    .hamburgar-menu{
+        display: block;
+    }
+    .banners{
+        flex-direction: column;
+    }
+    .banner-text,.banner-image{
+        width: 100%;
+    }
+    .popular-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .form-container{
+        flex-direction: column;
+    }
+    .form-field{
+        width: 100%;
+    }
+   
+}
